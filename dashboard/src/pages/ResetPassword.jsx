@@ -9,7 +9,7 @@ import {
   clearAllForgotResetPassErrors,
 } from "@/store/slices/forgotResetPasswordSlice";
 import { getUser } from "@/store/slices/userSlices";
-import SpecialLoadingButton from "./sub-components/specialLoadingButton";
+import SpecialLoadingButton from "./sub-components/SpecialLoadingButton";
 import { toast } from "react-toastify";
 
 const Login = () => {
