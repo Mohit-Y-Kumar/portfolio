@@ -5,7 +5,7 @@ import { Label } from '@radix-ui/react-dropdown-menu';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import SpecialLoadingButton from './specialLoadingButton';
+import SpecialLoadingButton from './SpecialLoadingButton';
 import { clearAllUserErrors, getUser, resetProfile, updateProfile } from '@/store/slices/userSlices';
 import { toast } from 'react-toastify';
 

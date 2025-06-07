@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import SpecialLoadingButton from './specialLoadingButton';
+import SpecialLoadingButton from './SpecialLoadingButton';
 import { addNewTimeline, clearAllTimelineErrors, getAllTimeline, resetTimelineSlice } from '@/store/slices/timelineSlice';
 import { toast } from 'react-toastify';
 

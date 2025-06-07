@@ -3,7 +3,7 @@ import { addNewSkill, clearAllSkillErrors, getAllSkills, resetSkillSlice } from 
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import SpecialLoadingButton from './specialLoadingButton';
+import SpecialLoadingButton from './SpecialLoadingButton';
 import { Label } from '@radix-ui/react-dropdown-menu';
 
 function AddSkill() {

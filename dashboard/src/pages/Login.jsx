@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { login, clearAllUserErrors } from "@/store/slices/userSlices";
-import SpecialLoadingButton from './sub-components/specialLoadingButton';
+import SpecialLoadingButton from './sub-components/SpecialLoadingButton';
 
 const Login = () => {
   const [email, setEmail] = useState("");

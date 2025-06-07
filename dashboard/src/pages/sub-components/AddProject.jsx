@@ -1,7 +1,7 @@
 import { Input } from '@/components/ui/input';
 import { Label } from '@radix-ui/react-dropdown-menu';
 import React, { useEffect, useState } from 'react'
-import SpecialLoadingButton from './specialLoadingButton';
+import SpecialLoadingButton from './SpecialLoadingButton';
 import { Button } from '@/components/ui/button';
 import { useDispatch, useSelector } from 'react-redux';
 import { addNewProject, clearAllProjectErrors, getAllProjects, resetProjectSlice } from '@/store/slices/projectSlice';
