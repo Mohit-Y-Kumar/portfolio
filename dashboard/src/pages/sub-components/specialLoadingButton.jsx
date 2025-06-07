@@ -1,6 +1,6 @@
 import React from 'react'
 
-const specialLoadingButton = ({ content, width }) => {
+const SpecialLoadingButton = ({ content, width }) => {
     return (
         <>
 
@@ -16,4 +16,4 @@ const specialLoadingButton = ({ content, width }) => {
         </>
     )
 }
-export default specialLoadingButton;
+export default SpecialLoadingButton;
