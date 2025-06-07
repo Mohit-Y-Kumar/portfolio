@@ -73,7 +73,7 @@ export const getAllTimeline = () => async (dispatch) => {
     dispatch(timelineSlice.actions.getAllTimelineRequest());
   try {
     const {data} = await axios.get(
-        "http://localhost:4000/api/v1/timeline/getall",
+        "https://portfolio-3wz3.onrender.com/api/v1/timeline/getall",
       { withCredentials: true }
     );
     dispatch(
@@ -92,7 +92,7 @@ export const deleteTimeline = (id) => async (dispatch) => {
     dispatch(timelineSlice.actions.deleteTimelineRequest());
     try {
       const {data} = await axios.delete(
-        `http://localhost:4000/api/v1/timeline/delete/${id}`,
+        `https://portfolio-3wz3.onrender.com/api/v1/timeline/delete/${id}`,
         {
           withCredentials: true,
         }
@@ -111,7 +111,7 @@ export const deleteTimeline = (id) => async (dispatch) => {
     dispatch(timelineSlice.actions.addNewTimelineRequest());
     try {
       const {data} = await axios.post(
-        `http://localhost:4000/api/v1/timeline/add`,timelineData,
+        `https://portfolio-3wz3.onrender.com/api/v1/timeline/add`,timelineData,
         {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
