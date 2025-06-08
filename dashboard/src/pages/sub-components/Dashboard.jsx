@@ -35,6 +35,13 @@ const Dashboard = () => {
 
 
     const { user } = useSelector((state) => state.user);
+
+useEffect(() => {
+        if (user && user.portfolioURL) {
+            console.log("Portfolio URL:", user.portfolioURL);
+        }
+    }, [user]);
+
     const {
         skills
 
