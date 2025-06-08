@@ -38,7 +38,7 @@ const Dashboard = () => {
 
 useEffect(() => {
         if (user && user.portfolioURL) {
-            console.log("Portfolio URL:", user.portfolioURL);
+            
         }
     }, [user]);
 
