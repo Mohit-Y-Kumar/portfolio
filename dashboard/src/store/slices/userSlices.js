@@ -140,6 +140,9 @@ export const login = (email, password) => async (dispatch) => {
             { email, password },
             { withCredentials: true, headers: { "Content-Type": "application/json" } }
         );
+        localStorage.setItem("token",data.token);
+        axios.defaults.headers.common['Authorization'] =`Bearer ${data.token}`;
+
         dispatch(userSlice.actions.loginSuccess(data.user));
         dispatch(userSlice.actions.clearAllErrors());
     } catch (error) {
@@ -151,9 +154,13 @@ export const login = (email, password) => async (dispatch) => {
 export const getUser = () => async (dispatch) => {
     dispatch(userSlice.actions.loadUserRequest());
     try {
+        const token =localStorage.getItem("token");
         const { data } = await axios.get(
             "https://portfolio-3wz3.onrender.com/api/v1/user/me",
             {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
                 withCredentials: true,
             });
         dispatch(userSlice.actions.loadUserSuccess(data.user));
@@ -165,10 +172,16 @@ export const getUser = () => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
     try {
+        const token =localStorage.getItem("token");
         const { data } = await axios.get(
             "https://portfolio-3wz3.onrender.com/api/v1/user/logout",
-            { withCredentials: true }
+            { withCredentials: true ,
+                headers:{
+                    Authorization: `Bearer ${token}`,
+                },
+            }
         );
+        localStorage.removeItem("token");
         dispatch(userSlice.actions.logoutSuccess(data.message));
         dispatch(userSlice.actions.clearAllErrors());
     } catch (error) {
@@ -180,12 +193,15 @@ export const updatePassword =
     (currentPassword, newPassword, confirmNewPassword) => async (dispatch) => {
         dispatch(userSlice.actions.updatePasswordRequest());
         try {
+            const token =localStorage.getItem("token");
             const { data } = await axios.put(
                 "https://portfolio-3wz3.onrender.com/api/v1/user/update/password",
                 { currentPassword, newPassword, confirmNewPassword },
                 {
                     withCredentials: true,
-                    headers: { "Content-Type": "application/json" },
+                    headers: { "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                     },
                 }
             );
             dispatch(userSlice.actions.updatePasswordSuccess(data.message));
@@ -201,13 +217,16 @@ export const updatePassword =
 export const updateProfile = (newData) => async (dispatch) => {
     dispatch(userSlice.actions.updateProfileRequest());
     try {
+        const token =localStorage.getItem("token");
         const response = await axios.put(
             "https://portfolio-3wz3.onrender.com/api/v1/user/update/me",
 
             newData,
             {
                 withCredentials: true,
-                headers: { "Content-Type": "multipart/form-data" },
+                headers: { "Content-Type": "multipart/form-data" ,
+                    Authorization: `Bearer ${token}`,
+                },
             }
         );
         dispatch(userSlice.actions.updateProfileSuccess(response.data.message));
