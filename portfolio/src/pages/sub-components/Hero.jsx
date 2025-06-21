@@ -45,7 +45,7 @@ const Hero = () => {
                     <h1 className="text-tubeLight-effect overflow-x-hidden text-[1.3rem] 
             sm:text-[1.75rem] md:text-[2.2rem] lg:text-[2.8rem] tracking-[15px]">
                         <Typewriter
-                            words={["FULLSTACK DEVELOPER", "YOUTUBER", "FREELANCER"]}
+                            words={["SOFTWARE ENGINEER","FULLSTACK DEVELOPER", "YOUTUBER", "FREELANCER"]}
                             loop={50}
                             cursor
                             typeSpeed={70}
@@ -68,7 +68,7 @@ const Hero = () => {
 
             <div className="w-fit px-5 py-2 bg-slate-50 rounded-[20px] flex gap-5 
         items-center mt-4 md:mt-8 lg:mt-10">
-                <Link to={"https://github.com"} target="_blank">
+                <Link to={"https://github.com/Mohit-Y-Kumar"} target="_blank">
                     <Github className="text-red-500 w-7 h-7" />
                 </Link>
                 <Link to={user.instagram_URL} target="_blank">
