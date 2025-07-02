@@ -86,7 +86,7 @@ const Login = () => {
         </div>
       </div>
       <div className="flex justify-center items-center bg-muted h-[400px] w-[450px]">
-        <img src="/login.jpeg" alt="login" />
+        <img src="/lgn.avif" alt="login" />
       </div>
     </div>
   );
