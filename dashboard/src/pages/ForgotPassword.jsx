@@ -81,8 +81,8 @@ const ForgotPassword = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center bg-muted h-[400px] w-[450px]">
-                    <img src="/frgtpass.jpg" alt="login" className="h-full w-full object-cover rounded-xl border" />
+                <div className="flex items-end justify-center p-4">
+                    <img src="/frgtpass.jpg" alt="login" className="max-h-[500px] w-auto object-contain rounded-xl border" />
                 </div>
             </div>
 
