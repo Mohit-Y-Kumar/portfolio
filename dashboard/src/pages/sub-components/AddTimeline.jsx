@@ -125,7 +125,7 @@ const AddTimeline = () => {
                             {!loading ? (
                                 <Button
                                     type="submit"
-                                    onClick={() => handleAddNewTimeline}
+                                   
                                     className="w-full"
                                 >
                                     Add Timeline
