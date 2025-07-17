@@ -75,7 +75,7 @@ const Hero = () => {
                     <Instagram className="text-pink-500 w-7 h-7" />
                 </Link>
 
-                <Link to={user.linkedIn_URL} target="_blank">
+                <Link to={user.linkedin_URL} target="_blank">
                     <Linkedin className="text-sky-500 w-7 h-7" />
                 </Link>
                 <Link to={user.twitter_URL} target="_blank">
